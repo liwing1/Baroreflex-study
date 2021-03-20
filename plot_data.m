@@ -5,11 +5,11 @@ val_7 = val;
 clear val;
 
 fs = 1000;
-N = (16*60+40) * fs;
+N = (5*60) * fs;
 t = (1:N)/fs;
 
-ecg_05 = val_5(1,:);
-ecg_15 = val_5(2,:);
+ecg_05 = val_5(1,1:N);
+ecg_15 = val_5(2,1:N);
 
 subplot(2,1,1);
 plot(t, ecg_05);
