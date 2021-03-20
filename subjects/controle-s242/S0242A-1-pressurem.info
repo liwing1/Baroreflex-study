@@ -1,0 +1,10 @@
+Source: record cves/data/walking/S0242A-1-pressure
+val has 1 row (signal) and 27218 columns (samples/signal)
+Duration:     9:04
+Sampling frequency: 50 Hz  Sampling interval: 0.02 sec
+Row	Signal	Gain	Base	Units
+1	m1_pressure_1	1771.18918919	-32767	N/cm2
+
+To convert from raw units to the physical units shown
+above, call the 'rdmat.m' function from the wfdb-matlab
+toolbox: https://physionet.org/physiotools/matlab/wfdb-app-matlab/
