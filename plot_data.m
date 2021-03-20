@@ -1,20 +1,27 @@
 load subjects\controle-s242\s0242-06012405m.mat
-val_5 = val;
-load subjects\controle-s242\s0242-06012407m.mat
-val_7 = val;
+val_ecg = val;
+load subjects\controle-s242\S0242A-1-pressurem.mat
+val_bp = val;
 clear val;
 
-fs = 1000;
-N = (5*60) * fs;
-t = (1:N)/fs;
+fs_ecg = 1000;
+N_ecg = (5*60) * fs_ecg;
+t_ecg = (1:N_ecg)/fs_ecg;
 
-ecg_05 = val_5(1,1:N);
-ecg_15 = val_5(2,1:N);
+fs_bp = 50;
+N_bp = (5*60)*fs_bp;
+t_bp = (1:N_bp)/fs_bp;
+
+
+ecg = val_ecg(1,1:N);
+
+
+bp = val_ecg(2,1:N);
 
 subplot(2,1,1);
-plot(t, ecg_05);
+plot(t_ecg, ecg);
 xlabel('Time(s)');ylabel('mV');
 
 subplot(2,1,2);
-plot(t, ecg_15);
+plot(t_ecg, bp);
 xlabel('Time(s)');ylabel('mV');
