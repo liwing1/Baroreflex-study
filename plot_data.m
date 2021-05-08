@@ -1,52 +1,69 @@
-%SUBJECT - CONTROL 242
-load subjects\controle-s242\s0242-head-up-tiltm.mat
-[ecg_242, t_242] = param_signal(500, 5*60, -4122, 14361.0673195, val(2,300:length(val)));
-[abp_242, t_242] = param_signal(500, 5*60, -32649,297.432615385, val(3,300:length(val)));
+fs = 500;
+Tt = 30*60;
+
+%SUBJECT - CONTROL 221
+load subjects\controle-s221\s0221-head-up-tiltm.mat
+[ecg_221, t_221] = param_signal(fs, Tt, -12218, 16363.2960389, val(2,:));
+[abp_221, t_221] = param_signal(fs, Tt, -32463, 262.144, val(3,:));
+
+
+%SUBJECT - CONTROL 399
+load subjects\controle-s399\s0399-head-up-tiltm.mat
+[ecg_399, t_399] = param_signal(fs, Tt, -11773, 17402.767316	, val(2,:));
+[abp_399, t_399] = param_signal(fs, Tt, -85673,923.614175812	, val(3,:));
+
+%SUBJECT - STROKE 388
+load subjects\stroke-s388\s0388-head-up-tiltm.mat;
+[ecg_388, t_388] = param_signal(fs, Tt, -388, 12962.6765058, val(2,:));
+[abp_388, t_388] = param_signal(fs, Tt, -55472,525.793243816	, val(3,:));
+
+
+%SUBJECT - STROKE 389
+load subjects\stroke-s389\s0389-head-up-tiltm.mat;
+[ecg_389, t_389] = param_signal(fs, Tt, -13301, 17998.3602709	, val(2,:));
+[abp_389, t_389] = param_signal(fs, Tt, -59131,525.164469301	, val(3,:));
+
+cd CRSIDLab;
+crsidlab;
+
+%Plot subjects
+%{
 subplot(4,2,1);
-plot(t_242, ecg_242);
+plot(t_221, ecg_221);
 xlabel('Time(s)');ylabel('mV');
-title('ECG-SUBJECT 242(CONTROL)');
+title('ECG-SUBJECT 221(CONTROL)');
 subplot(4,2,2);
-plot(t_242, abp_242);
+plot(t_221, abp_221);
 xlabel('Time(s)');ylabel('mmHg');
-title('ABP-SUBJECT 242(CONTROL)');
+title('ABP-SUBJECT 221(CONTROL)');
 
 
-%SUBJECT - CONTROL 243
-load subjects\controle-s243\s0243-head-up-tiltm.mat
-[ecg_243, t_243] = param_signal(500, 5*60, -4214, 16260.4223844	, val(2,300:length(val)));
-[abp_243, t_243] = param_signal(500, 5*60, -31990,368.996173913	, val(3,300:length(val)));
 subplot(4,2,3);
-plot(t_243, ecg_243);
+plot(t_399, ecg_399);
 xlabel('Time(s)');ylabel('mV');
-title('ECG-SUBJECT 243(CONTROL)');
+title('ECG-SUBJECT 399(CONTROL)');
 subplot(4,2,4);
-plot(t_243, abp_243);
+plot(t_399, abp_399);
 xlabel('Time(s)');ylabel('mmHG');
-title('ABP-SUBJECT 243(CONTROL)');
+title('ABP-SUBJECT 399(CONTROL)');
 
-%SUBJECT - STROKE 324
-load subjects\'stroke- s324'\s0324-head-up-tiltm.mat;
-[ecg_324, t_324] = param_signal(500, 5*60, -614, 12937.0027505, val(2,300:length(val)));
-[abp_324, t_324] = param_signal(500, 5*60, -50741,344.629626682	, val(3,300:length(val)));
+
 subplot(4,2,5);
-plot(t_324, ecg_324);
+plot(t_388, ecg_388);
 xlabel('Time(s)');ylabel('mV');
-title('ECG-SUBJECT 324(STROKE)');
+title('ECG-SUBJECT 388(STROKE)');
 subplot(4,2,6);
-plot(t_324, abp_324);
+plot(t_388, abp_388);
 xlabel('Time(s)');ylabel('mmHG');
-title('ABP-SUBJECT 324(STROKE)');
+title('ABP-SUBJECT 388(STROKE)');
 
-%SUBJECT - STROKE 331
-load subjects\'stroke- s331'\s0331-head-up-tiltm.mat;
-[ecg_331, t_331] = param_signal(500, 5*60, -11961, 17441.0592991	, val(2,300:length(val)));
-[abp_331, t_331] = param_signal(500, 5*60, -38906,296.263257732	, val(3,300:length(val)));
+
 subplot(4,2,7);
-plot(t_331, ecg_331);
+plot(t_389, ecg_389);
 xlabel('Time(s)');ylabel('mV');
-title('ECG-SUBJECT 331(STROKE)');
+title('ECG-SUBJECT 389(STROKE)');
 subplot(4,2,8);
-plot(t_331, abp_331);
+plot(t_389, abp_389);
 xlabel('Time(s)');ylabel('mmHG');
-title('ABP-SUBJECT 331(STROKE)');
+title('ABP-SUBJECT 389(STROKE)');
+%}
