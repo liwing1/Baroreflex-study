@@ -1,0 +1,16 @@
+Source: record cves/data/sit-stand/s0164-sit-stand
+val has 7 rows (signals) and 337000 columns (samples/signal)
+Duration:    11:14
+Sampling frequency: 500 Hz  Sampling interval: 0.002 sec
+Row	Signal	Gain	Base	Units
+1	marker	62987.3777778	-32594	NU
+2	ecg	14359.7840355	-4164	mV
+3	abp	788.038777256	-78869	mmHg
+4	thermst	735415.660446	-304553	NU
+5	flow_rate	18252.5749001	-88514	NU
+6	o2	9356.02359139	-146316	mmHg
+7	co2	1414.33323763	-33669	mmHg
+
+To convert from raw units to the physical units shown
+above, call the 'rdmat.m' function from the wfdb-matlab
+toolbox: https://physionet.org/physiotools/matlab/wfdb-app-matlab/

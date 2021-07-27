@@ -4,8 +4,8 @@ sbp_detrend = detrend(patient.sig.bp.sbp.data); % retira trend linear do sbp
 % Janelamento antes de se calcular a FFT:
 N = length(rri_detrend);
 u = sbp_detrend.*hanning(length(sbp_detrend)); % esta será a entrada X(s);
+
 y = rri_detrend.*hanning(length(rri_detrend)); % esta será a saída Y(s)
-y(end+1)=y(end);
 fs = 4; % em Hz; frequencia de reamostragem
 
 T = N/fs; % Tempo de observação, = N*dt, onde dt = 1/fs = 1/4 s
@@ -76,6 +76,7 @@ end
 
 area_H_LF = trapz(HWsbp_lf);
 area_H_HF = trapz(HWsbp_hf);
+area_H_M = (area_H_LF + area_H_HF)/2;
 
 %%          Cálculo das áreas de BF (baixa frequencia) e AF (alta frequencia) da FT:
 % (continuação)
@@ -98,5 +99,6 @@ for i = 1:length(HWsbp)
 end
 area_H_LF_c = trapz(HWsbp_lf);
 area_H_HF_c = trapz(HWsbp_hf); 
+area_H_M_c = (area_H_LF_c + area_H_HF_c)/2;
 
 % Observe que, para o paciente utilizado como exemplo, não houve nenhum valor de coerência > 0,5 no intervalo de BF.

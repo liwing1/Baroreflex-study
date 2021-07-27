@@ -1,0 +1,13 @@
+s0212-head-up-tiltm 10 500 1000000
+s0212-head-up-tiltm.mat 16+192 62914.56(-32575)/NU 16 0 -32555 -3298 0 marker
+s0212-head-up-tiltm.mat 16+192 14374.4097904(-4091)/mV 16 0 -4555 -1024 0 ecg
+s0212-head-up-tiltm.mat 16+192 352.256(-32638)/mmHg 16 0 -9740 11678 0 abp
+s0212-head-up-tiltm.mat 16+192 17441.8645669(-37499)/cm/s 16 0 -25586 1924 0 mcar
+s0212-head-up-tiltm.mat 16+192 20737.0510264(-26293)/cm/s 16 0 -12851 3549 0 mcal
+s0212-head-up-tiltm.mat 16+192 34968.2930078(-23152)/cm/s 16 0 -23226 25240 0 radi
+s0212-head-up-tiltm.mat 16+192 28527.4352941(-32915)/NU 16 0 -32592 26752 0 thermst
+s0212-head-up-tiltm.mat 16+192 8456.32710647(-36718)/NU 16 0 -3192 29824 0 flow_rate
+s0212-head-up-tiltm.mat 16+192 6481.18229143(-99038)/mmHg 16 0 15237 -17082 0 o2
+s0212-head-up-tiltm.mat 16+192 1292.35960258(-32825)/mmHg 16 0 13208 7223 0 co2
+#Creator: wfdb2mat
+#Source: record cves/data/head-up-tilt/s0212-head-up-tilt

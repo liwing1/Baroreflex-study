@@ -1,0 +1,19 @@
+Source: record cves/data/head-up-tilt/s0214-head-up-tilt
+val has 10 rows (signals) and 1000000 columns (samples/signal)
+Duration:    33:20
+Sampling frequency: 500 Hz  Sampling interval: 0.002 sec
+Row	Signal	Gain	Base	Units
+1	marker	62854.9818182	-32556	NU
+2	ecg	14372.2904973	-4104	mV
+3	abp	258.503111111	-32199	mmHg
+4	mcar	12451.84	-32748	cm/s
+5	mcal	14596.6545455	-32816	cm/s
+6	radi	26599.2590604	-10996	cm/s
+7	thermst	29105.6941176	-32918	NU
+8	flow_rate	7444.61867427	-39142	NU
+9	o2	7257.74550788	-114911	mmHg
+10	co2	1173.85957598	-32828	mmHg
+
+To convert from raw units to the physical units shown
+above, call the 'rdmat.m' function from the wfdb-matlab
+toolbox: https://physionet.org/physiotools/matlab/wfdb-app-matlab/
