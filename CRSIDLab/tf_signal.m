@@ -1,3 +1,5 @@
+load subjects\s\s0402.mat
+filename = sprintf('BRS_S%i.txt',402);
 tempo = patient.sig.ecg.rri.time;
 rri_detrend = detrend(patient.sig.ecg.rri.data); % retira trend linear do rri
 sbp_detrend = detrend(patient.sig.bp.sbp.data); % retira trend linear do sbp
@@ -116,7 +118,6 @@ BRS_H_LF_c = trapz(HWsbp_lf);
 BRS_H_HF_c = trapz(HWsbp_hf); 
 BRS_H_M_c = (BRS_H_LF_c + BRS_H_HF_c)/2;
 
-filename = sprintf('BRS_S%i.txt',14);
 save(filename, 'BRS_H_HF', 'BRS_H_LF', 'BRS_H_M', 'BRS_H_HF_c', 'BRS_H_LF_c', 'BRS_H_M_c', '-ascii');
 clear all;
 % Observe que, para o paciente utilizado como exemplo, não houve nenhum valor de coerência > 0,5 no intervalo de BF.
