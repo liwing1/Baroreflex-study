@@ -1,5 +1,5 @@
-load subjects\s\s0402.mat
-filename = sprintf('BRS_S%i.txt',402);
+load subjects\s\s0334.mat
+filename = sprintf('BRS_S%i.txt',334);
 tempo = patient.sig.ecg.rri.time;
 rri_detrend = detrend(patient.sig.ecg.rri.data); % retira trend linear do rri
 sbp_detrend = detrend(patient.sig.bp.sbp.data); % retira trend linear do sbp

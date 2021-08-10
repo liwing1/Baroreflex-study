@@ -1,12 +1,13 @@
+load subjects/c/c0044.mat
+filename = sprintf('BRS_t_S%i.txt', 14);
+
 imp = patient.sys.sys1.models.model1.imResp.impulse{1,1};
 imp = [imp.' zeros(1,1198-length(imp))];
 L = length(imp);
 
-%fw1 = (1:L/2+1);
-%HWsbp = 2*abs(fft(imp))/L;
-%HWsbp = HWsbp(1:L/2+1);
-
-[HWsbp,fw1] = cpsd(imp,imp,[],[],[],4);
+fw1 = (1:L/2+1);
+HWsbp = 2*abs(fft(imp))/L;
+HWsbp = HWsbp(1:L/2+1);
 
 
 %%          Cálculo das áreas de BF (baixa frequencia) e AF (alta frequencia) da FT:
@@ -32,6 +33,6 @@ BRS_H_LF = trapz(HWsbp_lf);
 BRS_H_HF = trapz(HWsbp_hf);
 BRS_H_M = (BRS_H_HF + BRS_H_LF)/2;
 
-filename = sprintf('BRS_t_S%i.txt', 14);
-save(filename, 'BRS_H_HF', 'BRS_H_LF', 'BRS_H_M');
-clear all;
+
+save(filename, 'BRS_H_HF', 'BRS_H_LF', 'BRS_H_M', '-ascii');
+%clear all;

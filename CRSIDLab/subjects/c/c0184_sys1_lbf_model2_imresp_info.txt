@@ -1,0 +1,14 @@
+	IRM	Total DG	LF DG	HF DG	Latency	Tpeak
+RRI/SBP	4.4366	3.2956	3.1646	3.4312	-0.25	0.5
+RRI/----	----	----	----	----	----	----
+
+LBF model impulse response information:
+Output	RRI	ms
+Input 1	SBP	mmHg
+Input 2	----	----
+
+Legends
+IRM	Impulse response magnitude
+DG	Dynamic gain
+LF	Low frequency (0.04-0.15 Hz)
+HF	High frequency (0.15-0.4 Hz)
